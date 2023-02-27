@@ -14,10 +14,15 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
   });
-  // conn.on("");
+  let intervalID;
   conn.on("connect", () => {
-    conn.write("Name: MRI");
+    intervalID = setInterval(() => {
+      //conn.write("Move: up");
+    }, 1000);
   });
+  setTimeout(() => {
+    clearInterval(intervalID);
+  }, 3000);
   return conn;
 };
 
