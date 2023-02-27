@@ -5,16 +5,16 @@ const connect = function () {
     port: 50541, // PORT number here,
   });
 
-  // interpret incoming data as text
+  //interpret incoming data as text
   conn.setEncoding("utf8");
   conn.on("data", (data) => {
-    console.log("hey hey", data);
+    console.log(data);
   });
-  conn.on("");
-  conn.on("connect", () => {
-    conn.write("Hello from client!");
-  });
+  // conn.on("");
+  // conn.on("connect", () => {
+  //   conn.write("Hello from client!");
+  // });
   return conn;
 };
 
-module.exports = connect;
+module.exports = { connect };
