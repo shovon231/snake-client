@@ -1,29 +1,15 @@
 const net = require("net");
-const stdin = require("process");
-const { setupInput } = require("./play");
+const { IP, PORT, USERNAME } = require("./constants");
 
 const connect = function () {
   const conn = net.createConnection({
-    host: "localhost", // IP address here,
-    port: 50541, // PORT number here,
+    host: IP, // IP address here,
+    port: PORT, // PORT number here,
   });
   let interval = 0;
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    conn.write(`Name: snk`);
-    setInterval(() => {
-      //conn.write("Move: up");
-    }, 500);
-
-    setTimeout(() => {
-      conn.write("Move: left");
-    }, 1000);
-    setTimeout(() => {
-      conn.write("Move: down");
-    }, 2000);
-    setTimeout(() => {
-      conn.write("Move: right");
-    }, 3000);
+    conn.write(`Name: ${USERNAME}`);
   });
 
   // Define encoding

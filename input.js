@@ -1,18 +1,5 @@
+const { commands } = require("./constants");
 let connection;
-
-// const setupInput = (conn) => {
-//   connection = conn;
-// };
-
-let commands = {
-  w: "Move: up",
-  a: "Move: left",
-  s: "Move: down",
-  d: "Move: right",
-  q: "Say:  hey",
-  z: "Say:  hello",
-  x: "Say:  bye",
-};
 
 const setupInput = function (conn) {
   connection = conn;
