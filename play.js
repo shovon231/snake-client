@@ -4,4 +4,4 @@ console.log("Connecting ...");
 let connection = connect();
 // setup interface to handle user input from stdin
 
-setupInput();
+setupInput(connection);
