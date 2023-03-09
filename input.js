@@ -1,7 +1,7 @@
 const { commands } = require("./constants");
 let connection;
 
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -10,7 +10,7 @@ const setupInput = function (conn) {
   stdin.on("data", handleUserInput);
   return stdin;
 };
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   // your code here
   // \u0003 maps to ctrl+c input
   if (key === "\u0003") {
