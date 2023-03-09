@@ -9,6 +9,9 @@ let commands = {
   a: "Move: left",
   s: "Move: down",
   d: "Move: right",
+  q: "Say:  hey",
+  z: "Say:  hello",
+  x: "Say:  bye",
 };
 
 const setupInput = function (conn) {
